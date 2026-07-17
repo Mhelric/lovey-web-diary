@@ -5,13 +5,12 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signO
 // 1. Paste your Firebase Credentials right here:
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDvUuFFEDE6NFJqBLBnmZ2TCSFpSPAJtRs",
-  authDomain: "lovey-web-diary.firebaseapp.com",
-  projectId: "lovey-web-diary",
-  storageBucket: "lovey-web-diary.firebasestorage.app",
-  messagingSenderId: "359717271008",
-  appId: "1:359717271008:web:dd7a95012862e5b52d6785",
-  measurementId: "G-5MCNKBNTXR"
+  apiKey: "AIzaSyBhBVY7D71le6EXS6XvAWYmwl-HwtMOgYU",
+  authDomain: "lovey-web-diary-53156.firebaseapp.com",
+  projectId: "lovey-web-diary-53156",
+  storageBucket: "lovey-web-diary-53156.firebasestorage.app",
+  messagingSenderId: "357105051744",
+  appId: "1:357105051744:web:55c6600b038d486135bb05"
 };
 
 // Initialize Firebase App & Services
