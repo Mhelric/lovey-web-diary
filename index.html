@@ -82,6 +82,21 @@
             </div>
         </main>
 
+        <div id="music-player-drawer" class="music-drawer drawer-hidden">
+            <audio id="bg-music" src="art/song.mp3" loop></audio>
+            <div class="drawer-notch"></div>
+            <div class="music-info-block">
+                <span class="music-icon-spinning">🎵</span>
+                <div class="track-text-meta">
+                    <p class="track-title">Our Favorite Song ✨</p>
+                    <p class="track-status">Paused</p>
+                </div>
+            </div>
+            <div class="music-controls-row">
+                <button id="music-play-pause-btn" class="music-action-btn" aria-label="Play/Pause">▶️</button>
+            </div>
+        </div>
+
         <div id="hud-counters" class="hud-counter-row">
             <div class="counter-item">
                 <span id="days-together" class="counter-number">0</span>

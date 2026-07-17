@@ -395,3 +395,102 @@ button:active {
     border: 1px solid var(--love-pink);
     font-size: 1.25rem;
 }
+
+/* ======================================================
+   7. FLOATING MUSIC DOCK DRAWER STYLES
+   ====================================================== */
+.music-drawer {
+    position: absolute;
+    bottom: 75px; /* Sits perfectly above the bottom baseline navbar */
+    left: 12px;
+    right: 12px;
+    background-color: var(--canvas-bg);
+    border: 2px solid var(--love-pink);
+    border-radius: 16px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(45, 42, 38, 0.1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    z-index: 10;
+}
+
+/* Slide configurations utilizing hardware acceleration */
+.drawer-hidden {
+    transform: translateY(120%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.drawer-visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.drawer-notch {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 4px;
+    background-color: var(--border-color);
+    border-radius: 2px;
+}
+
+.music-info-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.music-icon-spinning {
+    font-size: 1.5rem;
+}
+
+/* Micro interaction to spin the musical note smoothly when music plays */
+.playing .music-icon-spinning {
+    animation: spinNote 3s linear infinite;
+}
+
+@keyframes spinNote {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.track-text-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.track-status {
+    font-size: 0.75rem;
+    color: #7A756E;
+}
+
+.music-controls-row {
+    display: flex;
+    align-items: center;
+}
+
+.music-action-btn {
+    background-color: var(--blush-bg);
+    border: 1px solid var(--love-pink);
+    color: var(--text-main);
+    font-size: 1.1rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
