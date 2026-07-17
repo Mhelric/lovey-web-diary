@@ -153,8 +153,10 @@ const prevBtn = document.getElementById('prev-page-btn');
 const nextBtn = document.getElementById('next-page-btn');
 const musicToggle = document.getElementById('music-dock-toggle');
 const settingsToggle = document.getElementById('settings-dock-toggle');
+const newPageBtn = document.getElementById('new-page-btn'); // New line entry point
 
 if (prevBtn) prevBtn.addEventListener('click', () => console.log('Previous diary page triggered!'));
 if (nextBtn) nextBtn.addEventListener('click', () => console.log('Next diary page triggered!'));
-if (musicToggle) musicToggle.addEventListener('click', () => alert('Music Engine Dock coming up next! 🎵'));
+if (musicToggle) musicToggle.addEventListener('click', () => alert('Music Engine Dock coming up! 🎵'));
 if (settingsToggle) settingsToggle.addEventListener('click', () => alert('Settings & Profile Modal tray coming soon! ⚙️'));
+if (newPageBtn) newPageBtn.addEventListener('click', () => alert('New Diary Form toggle activated! ✍️'));

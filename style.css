@@ -346,10 +346,10 @@ button:active {
 }
 
 /* ======================================================
-   6. INTEGRATED NAVIGATION BAR TRAY DOCK
+   6. INTEGRATED 5-BUTTON NAVIGATION TRAY
    ====================================================== */
 .bottom-nav {
-    padding: 10px 15px;
+    padding: 12px 8px;
     background-color: var(--canvas-bg);
     border-top: 1px dashed var(--border-color);
     width: 100%;
@@ -357,41 +357,41 @@ button:active {
 
 .nav-toolbar-tray {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /* Distributes all 5 buttons equally across the width */
     align-items: center;
     width: 100%;
-}
-
-.center-tray-group {
-    display: flex;
-    gap: 20px; /* Spaces out internal utility tools neatly */
-    justify-content: center;
-    align-items: center;
 }
 
 /* Base style for individual nav icons */
 .nav-icon-btn {
     background-color: transparent;
     color: var(--text-main);
-    border: 1px solid transparent;
-    font-size: 1.2rem;
-    padding: 10px 16px; /* Fat finger touch target bounding boxes */
+    border: none;
+    font-size: 1.15rem;
+    padding: 12px; /* Fat finger touch targets */
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     transition: transform 0.1s ease, background-color 0.2s ease;
 }
 
-/* Subtle physical feedback highlight on tap */
+/* Snappy feedback transition on touch click */
 .nav-icon-btn:active {
-    transform: scale(1.15);
+    transform: scale(1.2);
     background-color: var(--blush-bg);
-    color: var(--love-pink);
 }
 
-/* Highlight specifically the arrow actions slightly */
+/* Accent color for arrow navigation actions */
 #prev-page-btn, #next-page-btn {
     color: var(--love-pink);
     font-weight: bold;
+}
+
+/* Distinct visual style specifically for the center "New Entry" button */
+.highlight-center-btn {
+    background-color: var(--blush-bg);
+    border: 1px solid var(--love-pink);
+    font-size: 1.25rem;
 }
