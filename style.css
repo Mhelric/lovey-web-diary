@@ -166,19 +166,6 @@ button:active {
     color: #7A756E;
 }
 
-.bottom-nav {
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    border-top: 1px dashed var(--border-color);
-}
-
-#logout-btn {
-    background-color: #7A756E;
-    padding: 8px 16px;
-    font-size: 0.85rem;
-}
-
 /* ======================================================
    4. MILESTONE HUD COUNTERS
    ====================================================== */
@@ -356,4 +343,55 @@ button:active {
     padding: 4px 8px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+/* ======================================================
+   6. INTEGRATED NAVIGATION BAR TRAY DOCK
+   ====================================================== */
+.bottom-nav {
+    padding: 10px 15px;
+    background-color: var(--canvas-bg);
+    border-top: 1px dashed var(--border-color);
+    width: 100%;
+}
+
+.nav-toolbar-tray {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.center-tray-group {
+    display: flex;
+    gap: 20px; /* Spaces out internal utility tools neatly */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Base style for individual nav icons */
+.nav-icon-btn {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid transparent;
+    font-size: 1.2rem;
+    padding: 10px 16px; /* Fat finger touch target bounding boxes */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+/* Subtle physical feedback highlight on tap */
+.nav-icon-btn:active {
+    transform: scale(1.15);
+    background-color: var(--blush-bg);
+    color: var(--love-pink);
+}
+
+/* Highlight specifically the arrow actions slightly */
+#prev-page-btn, #next-page-btn {
+    color: var(--love-pink);
+    font-weight: bold;
 }

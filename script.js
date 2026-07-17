@@ -145,3 +145,16 @@ function triggerDynamicGreetings(name) {
         greetText.innerText = `Welcome back to our safe space, ${name}! What beautiful memory are we tracking today? ❤️`;
     }
 }
+
+// ======================================================
+// 5. PHASE 1 NAV BAR CLICK EVENT ACTION INTERFACES
+// ======================================================
+const prevBtn = document.getElementById('prev-page-btn');
+const nextBtn = document.getElementById('next-page-btn');
+const musicToggle = document.getElementById('music-dock-toggle');
+const settingsToggle = document.getElementById('settings-dock-toggle');
+
+if (prevBtn) prevBtn.addEventListener('click', () => console.log('Previous diary page triggered!'));
+if (nextBtn) nextBtn.addEventListener('click', () => console.log('Next diary page triggered!'));
+if (musicToggle) musicToggle.addEventListener('click', () => alert('Music Engine Dock coming up next! 🎵'));
+if (settingsToggle) settingsToggle.addEventListener('click', () => alert('Settings & Profile Modal tray coming soon! ⚙️'));
