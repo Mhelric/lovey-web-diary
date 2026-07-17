@@ -1,3 +1,48 @@
-<html>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Web-Diary Book 📖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="auth-screen" class="screen active">
+        <div class="cover-card">
+            <img id="mascot" src="art/idle.png" alt="Mascot">
+            <h2>Our Shared Diary Book</h2>
+            <p id="auth-status">A private digital safe space for our memories.</p>
+            <button id="login-btn">Open Diary Book 📖</button>
+        </div>
+    </div>
+
+    <div id="app-screen" class="screen hidden">
+        <header class="header-dock">
+            <div class="profile-portal">
+                <img id="user-avatar" src="art/idle.png" alt="Chibi">
+                <span id="username-display">Loading...</span>
+            </div>
+            <div class="date-portal">
+                <span id="date-today"></span>
+            </div>
+        </header>
+
+        <main class="diary-canvas">
+            <div id="greet-box" class="greet-container">
+                <p id="greet-text">Welcome back, love! ❤️</p>
+            </div>
+            
+            <div class="entry-placeholder">
+                <p>Authentication Successful. Ready to build the scrollable diary ledger here next!</p>
+            </div>
+        </main>
+
+        <footer class="bottom-nav">
+            <button id="logout-btn">Close Book 🔒</button>
+        </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
 </html>
