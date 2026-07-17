@@ -22,7 +22,7 @@ const provider = new GoogleAuthProvider();
 
 // Private Access Security Gatekeeper Whitelist
 const WHITELISTED_EMAILS = [
-    "yourgmail@gmail.com", // 👈 Replace with your exact Gmail address
+    "banaagmhelric27@gmail.com",
     "jairagmail@gmail.com"  // 👈 Replace with Jaira's Gmail address once known
 ];
 
