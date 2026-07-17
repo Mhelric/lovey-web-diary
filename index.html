@@ -30,13 +30,68 @@
 
         <main class="diary-canvas">
             <div id="greet-box" class="greet-container">
-                <p id="greet-text">Welcome back, love! ❤️</p>
+                <p id="greet-text">Opening our journal... ❤️</p>
             </div>
             
-            <div class="entry-placeholder">
-                <p>Authentication Successful. Ready to build the scrollable diary ledger here next!</p>
+            <div id="diary-timeline-feed">
+
+                <article class="diary-page-card">
+                    
+                    <div class="card-header-stamp">
+                        <div class="author-stamp">
+                            <div class="mini-avatar-slot"></div>
+                            <span class="author-name">Mhelric</span>
+                        </div>
+                        <time class="card-date-stamp">Oct 18, 2025</time>
+                    </div>
+
+                    <h3 class="entry-title">The Day We Met 🌸</h3>
+
+                    <div class="entry-media-container">
+                        <div class="media-aspect-ratio-box">
+                            <p class="wireframe-text">[ Media Placeholder: Image / Video / Voice Node ]</p>
+                        </div>
+                    </div>
+
+                    <div class="entry-body-text">
+                        <p>This is where the written text paragraph element goes. It describes the sweet memory, the feelings, or the stories behind the posted entry items perfectly.</p>
+                    </div>
+
+                    <fieldset class="entry-checklist-block">
+                        <legend class="section-label">Our Checklist</legend>
+                        <label class="checkbox-row">
+                            <input type="checkbox" checked disabled>
+                            <span>Talked for hours over coffee</span>
+                        </label>
+                        <label class="checkbox-row">
+                            <input type="checkbox" disabled>
+                            <span>Take our first photo together</span>
+                        </label>
+                    </fieldset>
+
+                    <div class="card-interaction-footer">
+                        <div class="reaction-stamps-row">
+                            <span class="sticker-badge">❤️ <small>2</small></span>
+                            <span class="sticker-badge">✨ <small>1</small></span>
+                            <span class="add-sticker-btn">+ Stamp</span>
+                        </div>
+                    </div>
+
+                </article>
+
             </div>
         </main>
+
+        <div id="hud-counters" class="hud-counter-row">
+            <div class="counter-item">
+                <span id="days-together" class="counter-number">0</span>
+                <span class="counter-label">days together 💛</span>
+            </div>
+            <div class="counter-item">
+                <span id="days-known" class="counter-number">0</span>
+                <span class="counter-label">days since we met</span>
+            </div>
+        </div>
 
         <footer class="bottom-nav">
             <button id="logout-btn">Close Book 🔒</button>

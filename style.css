@@ -142,12 +142,20 @@ button:active {
 }
 
 .greet-container {
-    background-color: var(--blush-bg);
-    border: 1px solid var(--love-pink);
+    background-color: #FFF;
+    border: 1px dashed var(--love-pink);
     border-radius: 12px;
-    padding: 15px;
+    padding: 18px 15px;
     text-align: center;
     margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.greet-container p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-main);
+    line-height: 1.4;
 }
 
 .entry-placeholder {
@@ -169,4 +177,183 @@ button:active {
     background-color: #7A756E;
     padding: 8px 16px;
     font-size: 0.85rem;
+}
+
+/* ======================================================
+   4. MILESTONE HUD COUNTERS
+   ====================================================== */
+.hud-counter-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--blush-bg);
+    border-top: 1px dashed var(--border-color);
+    padding: 12px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.counter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.counter-number {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--love-pink);
+}
+
+.counter-label {
+    font-size: 0.7rem;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+/* ======================================================
+   5. DIARY CARD TIMELINE STRUCTURE
+   ====================================================== */
+#diary-timeline-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Spaces out subsequent entry cards vertically */
+    padding-bottom: 40px;
+}
+
+/* Individual Diary Notebook Card Frame Layout */
+.diary-page-card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spaces out components inside the page card cleanly */
+}
+
+/* Metadata Row Alignment */
+.card-header-stamp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 8px;
+}
+
+.author-stamp {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Wireframe avatar placeholder circle */
+.mini-avatar-slot {
+    width: 24px;
+    height: 24px;
+    background-color: var(--blush-bg);
+    border: 1px solid var(--love-pink);
+    border-radius: 50%;
+}
+
+.author-name {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.card-date-stamp {
+    font-size: 0.8rem;
+    color: #7A756E;
+    font-style: italic;
+}
+
+/* Header Text Block */
+.entry-title {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+/* Multimedia Content Slot */
+.entry-media-container {
+    width: 100%;
+    background-color: #FAF6EE;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.media-aspect-ratio-box {
+    width: 100%;
+    padding: 30% 0; /* Mimics a clean image box block height ratio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wireframe-text {
+    font-size: 0.8rem;
+    color: #9A958E;
+}
+
+/* Paragraph Body Text Block */
+.entry-body-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-main);
+}
+
+/* Checklist Section */
+.entry-checklist-block {
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.section-label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--love-pink);
+    padding: 0 6px;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    margin-top: 6px;
+    color: var(--text-main);
+}
+
+/* Reactions Tray Footer */
+.card-interaction-footer {
+    border-top: 1px dashed var(--border-color);
+    padding-top: 10px;
+}
+
+.reaction-stamps-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.sticker-badge {
+    background-color: var(--blush-bg);
+    border: 1px solid var(--love-pink);
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.add-sticker-btn {
+    font-size: 0.75rem;
+    color: #7A756E;
+    border: 1px dashed #7A756E;
+    padding: 4px 8px;
+    border-radius: 20px;
+    cursor: pointer;
 }
