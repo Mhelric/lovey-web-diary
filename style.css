@@ -50,56 +50,148 @@ body {
 }
 
 /* ======================================================
-   2. AUTHENTICATION COVER UI
+   2. AUTHENTICATION COVER UI (SCRAPBOOK DESIGN UPGRADE)
    ====================================================== */
 #auth-screen {
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 24px;
+    background-color: var(--canvas-bg);
 }
 
-.cover-card {
-    background-color: #FFF;
-    border: 2px solid var(--border-color);
-    border-radius: 16px;
-    padding: 40px 20px;
+.scrapbook-cover-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Ransom Cutout Letter Containers */
+.cutout-word {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.letter {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 42px;
+    font-family: "Georgia", serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--text-main);
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid rgba(45, 42, 38, 0.15);
+}
+
+.text-upper { text-transform: uppercase; }
+
+/* Dynamic Color Palettes for Individual Ransom Boxes */
+.c-orange { background-color: #FCDAB7; transform: rotate(-4deg); }
+.c-cream  { background-color: #FFFDF9; transform: rotate(3deg); }
+.c-blue   { background-color: #B9E0FF; transform: rotate(-2deg); }
+.c-pink   { background-color: #FFC6FF; transform: rotate(5deg); }
+.c-yellow { background-color: #FDFFB6; transform: rotate(-5deg); }
+.c-purple { background-color: #D6C7FF; transform: rotate(2deg); }
+.c-red    { background-color: #FFADAD; transform: rotate(-3deg); width: 38px; }
+.c-green  { background-color: #CAFFBF; transform: rotate(4deg); }
+.c-dark   { background-color: #E2E2E2; transform: rotate(-2deg); }
+
+/* Gingham / Red Checkered Paper Patch Backdrop */
+.gingham-patch-backdrop {
+    width: 85%;
+    max-width: 290px;
+    background-color: #FFFFFF;
+    background-image: 
+        linear-gradient(90deg, rgba(213, 0, 109, 0.15) 50%, transparent 50%),
+        linear-gradient(rgba(213, 0, 109, 0.15) 50%, transparent 50%);
+    background-size: 20px 20px;
+    border: 1px solid rgba(213, 0, 109, 0.2);
+    padding: 25px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    margin: 10px 0;
+}
+
+/* Authentic Polaroid Snapshot Photo Frame */
+.polaroid-photo-frame {
+    background-color: #FFFFFF;
+    padding: 12px 12px 24px 12px;
+    box-shadow: 0 6px 15px rgba(45, 42, 38, 0.12);
+    border: 1px solid #EAE6DF;
+    transform: rotate(-1.5deg);
+    width: 100%;
+    max-width: 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.polaroid-inner-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #FAF6EE;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.polaroid-inner-photo img {
+    width: 85px;
+    height: auto;
+    object-fit: contain;
+}
+
+.polaroid-caption {
     text-align: center;
     width: 100%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.cover-card img {
-    width: 80px;
-    height: auto;
+.caption-handwritten {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #5A544A;
+    letter-spacing: -0.5px;
+}
+
+/* Security Prompt Info Text & Styled Button */
+#auth-status {
+    font-size: 0.85rem;
+    margin-top: 15px;
     margin-bottom: 20px;
-}
-
-.cover-card h2 {
-    color: var(--love-pink);
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.cover-card p {
-    font-size: 0.9rem;
-    margin-bottom: 30px;
     color: #7A756E;
+    text-align: center;
 }
 
-button {
+.scrapbook-login-btn {
     background-color: var(--love-pink);
     color: white;
     border: none;
-    padding: 14px 28px;
-    font-size: 1rem;
+    padding: 14px 32px;
+    font-size: 0.95rem;
     font-weight: bold;
     border-radius: 30px;
     cursor: pointer;
-    transition: transform 0.1s ease;
+    box-shadow: 0 4px 8px rgba(215, 0, 109, 0.2);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-button:active {
-    transform: scale(0.95);
+.scrapbook-login-btn:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 4px rgba(215, 0, 109, 0.1);
 }
 
 /* ======================================================
